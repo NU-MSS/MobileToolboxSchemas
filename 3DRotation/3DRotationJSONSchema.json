@@ -1,0 +1,314 @@
+{
+  "$id" : "https://mobile-toolbox.github.io/mobile-client-json/schemas/v2/MultipleChoiceSequenceCATTaskResult.json",
+  "$schema" : "http://json-schema.org/draft-07/schema#",
+  "additionalProperties" : false,
+  "definitions" : {
+    "DEConsideredStep" : {
+      "$id" : "#DEConsideredStep",
+      "additionalProperties" : false,
+      "description" : "",
+      "properties" : {
+        "administered" : {
+          "type" : "boolean"
+        },
+        "exposure" : {
+          "type" : "number"
+        },
+        "identifier" : {
+          "type" : "string"
+        },
+        "randomNumber" : {
+          "type" : "number"
+        }
+      },
+      "required" : [
+        "identifier",
+        "exposure",
+        "administered"
+      ],
+      "title" : "DEConsideredStep",
+      "type" : "object"
+    },
+    "DEScores" : {
+      "$id" : "#DEScores",
+      "additionalProperties" : false,
+      "description" : "",
+      "properties" : {
+        "finalSE" : {
+          "type" : "number"
+        },
+        "finalTheta" : {
+          "type" : "number"
+        },
+        "itemCount" : {
+          "type" : "integer"
+        },
+        "startSE" : {
+          "type" : "number"
+        },
+        "startTheta" : {
+          "type" : "number"
+        }
+      },
+      "required" : [
+        "itemCount",
+        "startTheta",
+        "finalTheta",
+        "startSE",
+        "finalSE"
+      ],
+      "title" : "DEScores",
+      "type" : "object"
+    },
+    "MSSControlEvent" : {
+      "$id" : "#MSSControlEvent",
+      "description" : "",
+      "enum" : [
+        "touchDown",
+        "touchUpInside",
+        "touchUpOutside",
+        "touchDownRepeat",
+        "keyPress",
+        "setSelection",
+        "stepBegins",
+        "uiEnabled",
+        "interrupted",
+        "resumed",
+        "dragStart",
+        "drop",
+        "unknownEvent"
+      ],
+      "title" : "MSSControlEvent",
+      "type" : "string"
+    },
+    "MSSUserInteraction" : {
+      "$id" : "#MSSUserInteraction",
+      "additionalProperties" : false,
+      "description" : "",
+      "properties" : {
+        "controlEvent" : {
+          "$ref" : "#/definitions/MSSControlEvent"
+        },
+        "parent" : {
+          "type" : "string"
+        },
+        "stepIdentifier" : {
+          "type" : "string"
+        },
+        "timestamp" : {
+          "format" : "date-time",
+          "type" : "string"
+        },
+        "userInteractionIdentifier" : {
+          "type" : "string"
+        },
+        "userInteractionNewStyleEncoder" : {
+          "type" : "boolean"
+        },
+        "value" : {
+          "type" : "string"
+        }
+      },
+      "required" : [
+        "controlEvent",
+        "stepIdentifier",
+        "userInteractionIdentifier",
+        "timestamp"
+      ],
+      "title" : "MSSUserInteraction",
+      "type" : "object"
+    },
+    "MultipleChoiceSequenceCATStepResult" : {
+      "$id" : "#MultipleChoiceSequenceCATStepResult",
+      "additionalProperties" : false,
+      "description" : "",
+      "properties" : {
+        "endDate" : {
+          "format" : "date-time",
+          "type" : "string"
+        },
+        "identifier" : {
+          "type" : "string"
+        },
+        "interactions" : {
+          "items" : {
+            "$ref" : "#/definitions/MSSUserInteraction"
+          },
+          "type" : "array"
+        },
+        "position" : {
+          "type" : "integer"
+        },
+        "practice" : {
+          "type" : "boolean"
+        },
+        "response" : {
+          "type" : "integer"
+        },
+        "responseTime" : {
+          "type" : "number"
+        },
+        "score" : {
+          "type" : "integer"
+        },
+        "se" : {
+          "type" : "number"
+        },
+        "startDate" : {
+          "format" : "date-time",
+          "type" : "string"
+        },
+        "theta" : {
+          "type" : "number"
+        },
+        "type" : {
+          "$ref" : "#/definitions/SerializableResultType",
+          "const" : "multipleChoiceSequenceCATStepResult"
+        },
+        "wasInterrupted" : {
+          "type" : "boolean"
+        }
+      },
+      "required" : [
+        "type",
+        "identifier"
+      ],
+      "title" : "MultipleChoiceSequenceCATStepResult",
+      "type" : "object"
+    },
+    "SerializableResultType" : {
+      "$id" : "#SerializableResultType",
+      "description" : "",
+      "examples" : [
+        "answer",
+        "assessment",
+        "base",
+        "collection",
+        "error",
+        "file",
+        "section"
+      ],
+      "title" : "SerializableResultType",
+      "type" : "string"
+    },
+    "TaskStatus" : {
+      "$id" : "#TaskStatus",
+      "description" : "",
+      "enum" : [
+        "willNotComplete",
+        "completed"
+      ],
+      "title" : "TaskStatus",
+      "type" : "string"
+    }
+  },
+  "description" : "",
+  "examples" : [
+    {
+      "consideredSteps" : [
+
+      ],
+      "endDate" : "2023-04-21T01:32:09.891-05:00",
+      "identifier" : "foo",
+      "locale" : "en_US",
+      "startDate" : "2023-04-21T01:32:09.891-05:00",
+      "stepHistory" : [
+
+      ],
+      "steps" : [
+
+      ],
+      "taskName" : "foo",
+      "taskStatus" : [
+        "completed"
+      ],
+      "type" : "mssTaskResult",
+      "userInteractions" : [
+
+      ]
+    }
+  ],
+  "properties" : {
+    "consideredSteps" : {
+      "items" : {
+        "$ref" : "#/definitions/DEConsideredStep"
+      },
+      "type" : "array"
+    },
+    "endDate" : {
+      "format" : "date-time",
+      "type" : "string"
+    },
+    "fileName" : {
+      "description" : "file name for json file sent to Synapse",
+      "type" : "string"
+    },
+    "identifier" : {
+      "type" : "string"
+    },
+    "locale" : {
+      "description" : "localization value (e.g. en-US, es)",
+      "type" : "string"
+    },
+    "schemaIdentifier" : {
+      "description" : "An identifier that can be used either by the developer or researcher for custom mapping.",
+      "type" : "string"
+    },
+    "scores" : {
+      "items" : {
+        "$ref" : "#/definitions/DEScores"
+      },
+      "type" : "array"
+    },
+    "seed" : {
+      "type" : "integer"
+    },
+    "startDate" : {
+      "format" : "date-time",
+      "type" : "string"
+    },
+    "stepHistory" : {
+      "items" : {
+        "$ref" : "#/definitions/MultipleChoiceSequenceCATStepResult"
+      },
+      "type" : "array"
+    },
+    "steps" : {
+      "items" : {
+        "$ref" : "#/definitions/MultipleChoiceSequenceCATStepResult"
+      },
+      "type" : "array"
+    },
+    "taskName" : {
+      "type" : "string"
+    },
+    "taskRunUUID" : {
+      "description" : "A unique identifier for this run of the assessment. This property is defined as readwrite to allow the controller for the task to set this on the ``AssessmentResult`` children included in this run.",
+      "type" : "string"
+    },
+    "taskStatus" : {
+      "$ref" : "#/definitions/TaskStatus"
+    },
+    "testVersion" : {
+      "type" : "string"
+    },
+    "type" : {
+      "$ref" : "#/definitions/SerializableResultType",
+      "const" : "mssTaskResult"
+    },
+    "userInteractions" : {
+      "items" : {
+        "$ref" : "#/definitions/MSSUserInteraction"
+      },
+      "type" : "array"
+    }
+  },
+  "required" : [
+    "taskName",
+    "identifier",
+    "type",
+    "consideredSteps"
+  ],
+  "title" : "MultipleChoiceSequenceCATTaskResult",
+  "type" : "object"
+}
