@@ -1,5 +1,5 @@
 {
-  "$id" : "https://mobile-toolbox.github.io/mobile-client-json/schemas/v2/MultipleChoiceSequenceCATTaskResult.json",
+  "$id" : "schemas/v0/3DRotation.json",
   "$schema" : "http://json-schema.org/draft-07/schema#",
   "additionalProperties" : false,
   "definitions" : {
