@@ -208,10 +208,7 @@
       "type" : "string"
     },
     "scores" : {
-      "items" : {
-        "$ref" : "#/definitions/MSSRawScoreResult"
-      },
-      "type" : "array"
+      "$ref" : "#/definitions/MSSRawScoreResult"
     },
     "startDate" : {
       "format" : "date-time",

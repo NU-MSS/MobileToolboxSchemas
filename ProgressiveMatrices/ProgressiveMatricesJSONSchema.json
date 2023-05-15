@@ -258,10 +258,7 @@
       "type" : "string"
     },
     "scores" : {
-      "items" : {
-        "$ref" : "#/definitions/DEScores"
-      },
-      "type" : "array"
+      "$ref" : "#/definitions/DEScores"
     },
     "seed" : {
       "type" : "integer"
