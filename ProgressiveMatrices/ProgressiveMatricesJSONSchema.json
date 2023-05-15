@@ -246,6 +246,9 @@
     "identifier" : {
       "type" : "string"
     },
+    "$schema" : {
+      "type" : "string"
+    },
     "locale" : {
       "description" : "localization value (e.g. en-US, es)",
       "type" : "string"
