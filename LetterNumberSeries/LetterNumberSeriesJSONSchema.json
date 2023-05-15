@@ -204,11 +204,12 @@
       "description" : "An identifier that can be used either by the developer or researcher for custom mapping.",
       "type" : "string"
     },
+    "schemaIdentifierPath" : {
+      "description" : "URL linking to the version of the schema against which these data should validate.",
+      "type" : "string"
+    },
     "scores" : {
-      "items" : {
-        "$ref" : "#/definitions/MSSRawScoreResult"
-      },
-      "type" : "array"
+      "$ref" : "#/definitions/MSSRawScoreResult"
     },
     "startDate" : {
       "format" : "date-time",
