@@ -204,8 +204,12 @@
       "description" : "An identifier that can be used either by the developer or researcher for custom mapping.",
       "type" : "string"
     },
-    "schemaIdentifierPath" : {
+    "jsonSchema" : {
       "description" : "URL linking to the version of the schema against which these data should validate.",
+      "type" : "string"
+    },
+    "$schema" : {
+      "description" : "a temporary URL linking to the version of the schema used during the ICAR pilot.",
       "type" : "string"
     },
     "scores" : {
