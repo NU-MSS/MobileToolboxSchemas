@@ -37,8 +37,7 @@
         }
       },
       "required" : [
-        "rawScore",
-        "mssRawScore"
+        "rawScore"
       ],
       "title" : "MSSRawScoreResult",
       "type" : "object"
