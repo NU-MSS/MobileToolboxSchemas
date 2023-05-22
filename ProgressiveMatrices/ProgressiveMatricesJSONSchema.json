@@ -1,5 +1,5 @@
 {
-  "$id" : "https://mobile-toolbox.github.io/mobile-client-json/schemas/v2/MultipleChoiceSequenceCATTaskResult.json",
+  "$id" : "schemas/v0/ProgressiveMatrices.json",
   "$schema" : "http://json-schema.org/draft-07/schema#",
   "additionalProperties" : false,
   "definitions" : {
@@ -254,11 +254,16 @@
       "description" : "An identifier that can be used either by the developer or researcher for custom mapping.",
       "type" : "string"
     },
+    "jsonSchema" : {
+      "description" : "URL linking to the version of the schema against which these data should validate.",
+      "type" : "string"
+    },
+    "$schema" : {
+      "description" : "a temporary URL linking to the version of the schema used during the ICAR pilot.",
+      "type" : "string"
+    },
     "scores" : {
-      "items" : {
-        "$ref" : "#/definitions/DEScores"
-      },
-      "type" : "array"
+      "$ref" : "#/definitions/DEScores"
     },
     "seed" : {
       "type" : "integer"
