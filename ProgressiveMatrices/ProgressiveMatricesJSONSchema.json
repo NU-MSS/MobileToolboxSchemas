@@ -310,7 +310,6 @@
   },
   "required" : [
     "taskName",
-    "identifier",
     "type",
     "consideredSteps"
   ],
