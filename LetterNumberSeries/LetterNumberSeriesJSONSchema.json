@@ -256,7 +256,6 @@
   },
   "required" : [
     "taskName",
-    "identifier",
     "type"
   ],
   "title" : "MultipleChoiceSequenceTaskResult",
