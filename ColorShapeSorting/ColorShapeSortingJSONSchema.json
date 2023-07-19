@@ -23,7 +23,7 @@
    "taskStatus":{
      "type": "string",
      "description": "completion status for the task."
-     "enum":: ["complete","willNotComplete","partiallyComplete"]
+     "enum": ["complete","willNotComplete","partiallyComplete"]
    },
    "locale":{
      "type": "string",
