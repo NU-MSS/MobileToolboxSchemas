@@ -180,7 +180,7 @@
               "controlEvent":{"$ref": "#/definitions/controlEvent"},
               "userInteractionIdentifier":{"$ref": "#/definitions/userInteractionIdentifier"}
             },
-            "additionalProperties": true,
+            
             "required": ["stepIdentifier","timestamp","controlEvent","userInteractionIdentifier"]
           },
           {
@@ -197,7 +197,7 @@
               },
               "parentStepIdentifier":{"$ref": "#/definitions/stepIdentifier"}
             },
-            "additionalProperties": true,
+            
             "required": ["stepIdentifier","timestamp","controlEvent","userInteractionIdentifier","parent"]
           }
         ]
@@ -520,7 +520,7 @@
       }
     }
   },
-  "additionalProperties": true,
+  
   "required": ["startDate","endDate","taskStatus","schemaIdentifier","testVersion","userInteractions","steps","stepHistory", "taskRunUUID"],
   "$comment": "The additional properties field is set to FALSE so that extra elements are not allowed. All required portions of a test occur in all exports. It is expected that taskRunUUID will be added to this list, and that eventually the fields `locale` and `taskName` will be removed as they will be recorded in the metaData export as opposed to herein."
 }
