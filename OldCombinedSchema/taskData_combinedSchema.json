@@ -260,9 +260,7 @@
               "theta":{"$ref": "#/definitions/theta"},
               "se":{"$ref": "#/definitions/se"}
             },
-            "required": ["type","identifier","startDate","endDate","position"],
-            "additionalProperties": true
-          },
+            "required": ["type","identifier","startDate","endDate","position"]          },
           {
             "type": "object",
             "description": "A record for each item administered in this assessment using the standard item selection engine, with Integer-Integer response-score models",
@@ -284,8 +282,7 @@
               "didTimeout": {"$ref": "#/definitions/didTimeout"},
               "response": {"$ref": "#/definitions/responseInt"}
             },
-            "required": ["type","identifier","startDate","endDate","position","response"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","endDate","position","response"]
           },
           {
             "type": "object",
@@ -304,8 +301,7 @@
               "section": {"$ref": "#/definitions/section"},
               "response": {"$ref": "#/definitions/responseStr"}
             },
-            "required": ["type","identifier","startDate","position","endDate","response"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","position","endDate","response"]
           },
           {
             "type": "object",
@@ -328,8 +324,7 @@
               "adjacentPairScoreName":{"$ref": "#/definitions/psmScoreName"},
               "parentStepIdentifier": {"$ref": "#/definitions/stepIdentifier"}
             },
-            "required": ["type","identifier","startDate","endDate","position","parentStepIdentifier"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","endDate","position","parentStepIdentifier"]
           },
           {
             "type": "object",
@@ -349,8 +344,7 @@
               "theta":{"$ref": "#/definitions/theta"},
               "se":{"$ref": "#/definitions/se"}
             },
-            "required": ["type","identifier","startDate","endDate","response","position","theta","se"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","endDate","response","position","theta","se"]
           },
           {
             "type": "object",
@@ -370,8 +364,7 @@
               "theta":{"$ref": "#/definitions/theta"},
               "se":{"$ref": "#/definitions/se"}
             },
-            "required": ["type","identifier","startDate","endDate","response","position","theta","se"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","endDate","response","position","theta","se"]
           }
         ]
       }
@@ -404,8 +397,7 @@
               "theta":{"$ref": "#/definitions/theta"},
               "se":{"$ref": "#/definitions/se"}
             },
-            "required": ["type","identifier","startDate","endDate"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","endDate"]
           },
           {
             "type": "object",
@@ -428,8 +420,7 @@
               "didTimeout": {"$ref": "#/definitions/didTimeout"},
               "response": {"$ref": "#/definitions/responseInt"}
             },
-            "required": ["type","identifier","startDate","endDate","response"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","endDate","response"]
           },
           {
             "type": "object",
@@ -447,8 +438,7 @@
               "position": {"$ref": "#/definitions/position"},
               "response": {"$ref": "#/definitions/responseStr"}
             },
-            "required": ["type","identifier","startDate","endDate","response"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","endDate","response"]
           },
           {
             "type": "object",
@@ -471,8 +461,7 @@
               "adjacentPairScoreName":{"$ref": "#/definitions/psmScoreName"},
               "parentStepIdentifier": {"$ref": "#/definitions/stepIdentifier"}
             },
-            "required": ["type","identifier","startDate","endDate","parentStepIdentifier"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","endDate","parentStepIdentifier"]
           },
           {
             "type": "object",
@@ -492,8 +481,7 @@
               "theta":{"$ref": "#/definitions/theta"},
               "se":{"$ref": "#/definitions/se"}
             },
-            "required": ["type","identifier","startDate","response","endDate","theta","se"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","response","endDate","theta","se"]
           },
           {
             "type": "object",
@@ -513,8 +501,7 @@
               "theta":{"$ref": "#/definitions/theta"},
               "se":{"$ref": "#/definitions/se"}
             },
-            "required": ["type","identifier","startDate","response","endDate","theta","se"],
-            "additionalProperties": true
+            "required": ["type","identifier","startDate","response","endDate","theta","se"]
           }
         ]
       }
@@ -522,5 +509,5 @@
   },
   
   "required": ["startDate","endDate","taskStatus","schemaIdentifier","testVersion","userInteractions","steps","stepHistory", "taskRunUUID"],
-  "$comment": "The additional properties field is set to FALSE so that extra elements are not allowed. All required portions of a test occur in all exports. It is expected that taskRunUUID will be added to this list, and that eventually the fields `locale` and `taskName` will be removed as they will be recorded in the metaData export as opposed to herein."
+  "$comment": "The additional properties field is removed to allow accept the default of allowing other fields."
 }
