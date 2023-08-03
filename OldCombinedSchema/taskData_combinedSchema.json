@@ -165,7 +165,7 @@
       "type": "array",
       "description": "List validation for user interactions. This records screen progression, UI events, and button actions on a step-by-step basis",
       "items":{
-        "oneOf": [
+        "anyOf": [
           {
             "type": "object",
             "description": "Standard user interactions for most measures",
@@ -237,7 +237,7 @@
       "description": "This records all of the items/steps administered during this assessment. It records the response and score",
       "additionalItems": false,
       "items":{
-        "oneOf": [
+        "anyOf": [
           {
             "type": "object",
             "description": "Generic step fields with NO response element, frequently used for instruction and transition screens",
@@ -374,7 +374,7 @@
       "description": "This records all of the items/steps administered presented or considered during this assessment. It records the response and score if an examinee got to that point; it also records items that may not have been completed, e.g. due to an interruption. It is identical to or a superset of the `steps` field",
       "additionalItems": false,
       "items":{
-        "oneOf": [
+        "anyOf": [
           {
             "type": "object",
             "description": "Generic step fields with NO response element, frequently used for instruction and transition screens",
